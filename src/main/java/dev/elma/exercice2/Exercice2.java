@@ -10,7 +10,7 @@ public class Exercice2 {
         SparkSession spark = SparkSession.builder().appName("app2").master("local[*]").getOrCreate();
         Dataset<Row> data = spark.read().option("header", true).option("inferSchema",true).csv("dataDev.csv");
         //Q1
-            //data.groupBy("service").count().show();
+        data.groupBy("service").count().show();
         //Q2
         data.groupBy(year(col("date")), col("service") ).count().orderBy(col("count").desc()).show();
 
