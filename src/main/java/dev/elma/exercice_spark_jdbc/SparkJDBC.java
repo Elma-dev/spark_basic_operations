@@ -2,8 +2,6 @@ package dev.elma.exercice_spark_jdbc;
 
 import org.apache.spark.sql.*;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Properties;
 
 import static org.apache.spark.sql.functions.col;
